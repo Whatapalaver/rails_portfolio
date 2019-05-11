@@ -1,6 +1,10 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
+Blog.delete_all
+Portfolio.delete_all
+Skill.delete_all
+
 10.times do |blog|
   Blog.create!(
     title: "My Blog Post #{blog}",
@@ -25,7 +29,7 @@ puts "5 skills created"
     subtitle: "Another cool site",
     body: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
     main_image: "https://via.placeholder.com/600x400",
-    thumb_image: "https://via.placeholder.com/350x2000"
+    thumb_image: "https://via.placeholder.com/350x200"
   )
 end
 
